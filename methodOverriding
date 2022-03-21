@@ -1,0 +1,22 @@
+package com.trinadh.methodOverriding;
+
+public class Greeting01 {
+    public void display(){
+        System.out.println("display message in Greeting01");
+    }
+}
+
+//========================================================================================
+package com.trinadh.methodOverriding;
+
+public class Greeting02 extends  Greeting01{
+    @Override
+    public void display(){
+        System.out.println("display message in Greeting02");
+    }
+
+    public static void main(String[] args) {
+        Greeting01 obj = new Greeting02();
+        obj.display();//display message in Greeting02
+    }
+}
