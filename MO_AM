@@ -1,0 +1,45 @@
+//method overloading with different accessModifiers
+
+package methodOverloading.staticDemo;
+
+public class NumberOperation {
+
+    public int sum(int n1,int n2,int n3,int n4){
+        return n1+n2+n3+n4;
+    }
+    static int sum(int n1,int n2){
+        return n1+n2;
+    }
+    private int sum(int n1){
+        return n1;
+    }
+    final int sum(int n1,int n2,int n3){
+        return n1+n2+n3;
+    }
+}
+//====================================================================
+package methodOverloading.staticDemo;
+
+public class Main extends NumberOperation {
+
+    @Override
+    public int sum(int n1,int n2,int n3,int n4){
+        return n1+n2+n3+n4;
+    }
+
+//    @Override
+//    static int sum(int n1,int n2){
+//        return n1+n2;
+//    }
+
+//IMP NOTE : static methods and private methods and final methods are not overriding.
+
+//    @Override
+//    private int sum(int n1){
+//        return n1;
+//    }
+//    final int sum(int n1,int n2,int n3){
+//        return n1+n2+n3;
+//    }
+
+}
